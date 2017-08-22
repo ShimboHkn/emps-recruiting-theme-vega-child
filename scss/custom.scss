@@ -1,0 +1,1667 @@
+@import 'setting';
+
+// ****************
+// ヘッダ
+// サイトナビ
+// コンテンツ
+// サイドバー
+// フッター
+// フロントページ
+// お知らせ
+// 求人
+// 求人登録
+// メッセージ通信（コメント）
+// 求人ブックマーク
+// 応募履歴
+// 検索
+// よくある質問
+// 運営会社
+// Theme My Login
+// ****************
+
+
+body {
+	background-color: white;
+	padding-top: 90px;
+}
+h1, h2, h3, h4, h5, h6 {
+	//font-family: sans-serif;
+}
+p, li, dt, dd {
+	line-height: 1.65;
+}
+
+label {
+	.description {
+		font-weight: normal;
+		padding-left: 0.5em;
+	}
+}
+select {
+	height: 3em;
+	border-color: #e0e0e0;
+	padding: 10px !important;
+	option {
+	}
+}
+textarea,
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="text"] {
+	width: 100%;
+	line-height: 1.4em;
+	background-color: #F8F8F8 !important;
+	border: 1px solid #dedede !important;
+	border-radius: 4px !important;
+	padding: 0.5em 8px !important;
+}
+textarea {
+	display: block;
+}
+input[type="text"] {
+	//height: 2.5em;
+	padding: 0.5em 8px;
+}
+input[type="radio"],
+input[type="checkbox"] {
+	display: inline-block !important;
+	text-indent: 0;
+	vertical-align: middle;
+	padding: 10px 0px;
+}
+.radio,
+.checkbox,
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+	display: inline-block !important;
+	font-weight: normal;
+	line-height: normal;
+	margin: 0 !important;
+//border: 1px dotted red;
+}
+input[type="submit"] {
+	display: inline-block;
+	margin: 10px 0px;
+}
+input#s {
+	width: 70%;
+}
+input#user_tel,
+input#user_addr_zip {
+	ime-mode: disabled;
+}
+input.desabled,
+input.desabled:hover {
+	color: #bbb;
+	background-color: #eee;
+	border: 1px solid #ddd;
+	cursor: default;
+}
+
+table {
+	width: 100%;
+	th, td {
+		border: 1px solid $bdC;
+		border-collapse: collapse;
+		padding: 0.5em 10px;
+	}
+//border: 1px dotted red;
+}
+
+.normal {
+	font-weight: normal;
+}
+.btn {
+	display: inline-block;
+	color: white;
+	line-height: normal;
+	background-color: $aC;
+	border-radius: 3px;
+	margin: 2px 0px;
+	padding: 8px 20px;
+	&:hover {
+		color: white;
+		background-color: #999;
+	}
+//border: 1px dotted red;
+}
+.align-right {
+	text-align: right !important;
+}
+.align-left {
+	text-align: left !important;
+}
+.align-center {
+	text-align: center !important;
+}
+.nowrap {
+	white-space: nowrap;
+}
+.caution {
+	color: #cc4400;
+}
+.red {
+	color: $redC;
+}
+.btn-sub {
+	color: $aC;
+	background-color: white;
+	border: 1px solid $aC;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	&:hover {
+		color: white;
+		border-color: white;
+	}
+}
+.comments-area {
+	border: none;
+}
+.required {
+	color: #cc0000;
+}
+// ページネーション
+.pagenav {
+	ul#pagination {
+		display: none;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		li {
+			display: block;
+			width: 45%;
+			line-height: normal;
+			margin: 0;
+			padding: 0;
+			a {
+				display: inline-block;
+				border: 1px solid #ccc;
+				border-radius: 4px;
+				padding: 6px 16px;
+				&:hover {
+					border-color: $aC;
+				}
+			}
+			&.page-prev {
+				float: left;
+				text-align: left;
+			}
+			&.page-next {
+				float: right;
+				text-align: right;
+			}
+		}
+	}
+//border: 1px dotted red;
+	nav#toppagelink {
+		$pnPH: 8px;
+		$pnPW: 10px;
+		clear: none;
+		//margin: 0px 120px 0px;
+		a,
+		span {
+			display: inline-block;
+			line-height: 1;
+			border: 1px solid #ccc;
+			border-radius: 2px;
+			padding: $pnPH $pnPW;
+			margin: 0px 2px;
+		}
+		span {
+			color: #888;
+			&.current {
+				font-weight: bold;
+				color: #ccc;
+				color: white;
+				background-color: #DDD;
+				border-color: #DDD;
+			}
+			&.extend {
+				//color: #666;
+			}
+			&.jumpnav {
+				display: none;
+			}
+		}
+		a {
+			&:hover {
+				color: white;
+				text-decoration: none;
+				background-color: $aC;
+				border-color: $aC;
+			}
+			&.first:before,
+			&.last:after {
+				//content: "|";
+			}
+		}
+//border: 1px dotted red;
+	}
+}
+
+// ****************
+// ヘッダ
+// ****************
+.banner-custom-header {
+	padding: 30px 0 24px;
+	.container {
+		padding: 0;
+		h1.block-title {
+			margin: 0;
+			&:after {
+				display: none;
+			}
+		}
+	}
+//border: 1px dotted red;
+}
+.navbar-fixed-top {
+	//background-color: $mC;
+	//border-bottom: 1px solid $mC !important;
+}
+.navbar-header {
+	a.text-logo {
+		color: $mC;
+		text-transform: none !important;
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// サイトナビ
+// ****************
+ul#menu-main-menu {
+	ul.dropdown-menu {
+		$ddmenuM: 3px;
+		width: 200px !important;
+		//top: -4px !important;
+		border-top-width: $ddmenuM;
+		border-radius: 0px 0px 8px 8px !important;
+		margin-top: -1*$ddmenuM !important;
+	}
+	li {
+		a {
+			&:before {
+				display: inline-block;
+				font-family: "FontAwesome";
+				font-size: 1.6em;
+				font-weight: normal !important;
+				color: $mC;
+				vertical-align: bottom;
+				padding: 0px 0.25em;
+				opacity: 0.75;
+			}
+			&:hover:before {
+				color: $aC;
+			}
+		}
+		&.active a:before {
+			color: $aC;
+		}
+		li {
+			& > a:before {
+				width: 1.4em;
+				font-size: 1.25em;
+				text-align: center;
+				//vertical-align: middle;
+				margin-right: 0.15em;
+				padding: 0;
+			}
+		}
+//border: 1px dotted red;
+		&.home {
+			& > a:before {
+				content: "\f015"; // fa-home
+			}
+		}
+		&.whatsnew {
+			& > a:before {
+				//content: "\f12a"; // fa-exclamation
+				//content: "\f087"; // fa-thumbs-o-up
+				content: "\f06a"; // fa-exclamation-circle
+			}
+			body.employer & {
+				display: none;
+			}
+		}
+		&.joboffer {
+			display: none;
+			body.user-level-10 &,
+			body.employer & {
+				display: inline-block;
+			}
+		}
+		li.job-registered {
+			& > a:before {
+				//content: "\f02b"; // fa-tag
+				content: "\f02c"; // fa-tags
+			}
+		}
+		li.job-register {
+			& > a:before {
+				content: "\f044"; // fa-pencile-square-o
+			}
+		}
+		&.search {
+			body.employer & {
+			}
+			& > a:before {
+				content: "\f002"; // fa-search
+			}
+		}
+		&.info {
+			& > a:before {
+				content: "\f075"; // fa-comment
+			}
+		}
+		&.inquire {
+			body.subscriber &,
+			body.employer & {
+				display: none;
+			}
+		}
+		&.inquire-member {
+			display: none;
+			body.subscriber & {
+				display: inline-block;
+			}
+		}
+		&.inquire-school {
+			display: none;
+			body.employer & {
+				display: inline-block;
+			}
+		}
+		li.faq {
+			& > a:before {
+				content: "\f2c4"; // fa-quora
+				content: "\f086"; // fa-comments
+			}
+		}
+		li.form {
+			& > a:before {
+				//content: "\f040"; //fa-pencile
+				content: "\f0e0"; //fa-envelope
+			}
+		}
+//border: 1px dotted red;
+		li.member {
+			& > a:before {
+				content: "\f2be"; // fa-user-circle-o
+			}
+		}
+		li.jobregistration {
+			& > a:before {
+				content: "\f044"; // fa-pencile-o
+			}
+		}
+		&.mypage {
+			li {
+				display: none;
+				body.logged-in & {
+					display: block;
+				}
+			}
+		}
+		li.profile {
+			& > a:before {
+				content: "\f007"; // fa-user
+			}
+		}
+		li.bookmark {
+			& > a:before {
+				content: "\f005"; // fa-star
+			}
+		}
+		li.emessage {
+			& > a:before {
+				content: "\f27a"; // fa-commenting
+			}
+		}
+		li.record {
+			& > a:before {
+				content: "\f2c3"; // fa-id-card-o
+			}
+		}
+		&.login {
+		}
+		li.log-in {
+			& > a:before {
+				content: "\f011"; // fa-power-off
+			}
+		}
+		li.registration {
+			& > a:before {
+				content: "\f2be"; // fa-user-circle-o
+				content: "\f044"; // fa-pencil-square-o
+				content: "\f040"; // fa-pencil
+			}
+		}
+		&.logout {
+			& > a:before {
+				content: "\f011"; // fa-power-off
+			}
+		}
+	}
+//border: 1px dotted red;
+}
+
+// ヘッダ下のカラーライン
+body {
+	$headerlineH: 0px;
+	.navbar, // ナビバー（ヘッダ）
+	.frontpage-banner, // フロントページのバナー
+	.banner-custom-header { // コンテンツページのバナーヘッダ
+		border: 0px solid $mC;
+	}
+	.navbar {
+		border-color: #ccc;
+		border-bottom-width: $headerlineH;
+	}
+	.frontpage-banner,
+	.banner-custom-header {
+			//border-top-width: 5px + $headerlineH;
+	}
+	.banner-custom-header {
+			//border-top-width: 0px + $headerlineH;
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// コンテンツ
+// ****************
+.banner-custom-header {
+	h1.block-title {
+	}
+}
+.section {
+	.entry .entry-title,
+	.page .page-title {
+		color: $mC;
+		&:after {
+			//display: none;
+			width: 2.4em;
+			border-bottom: 4px solid $mC !important;
+		}
+	}
+	h3 {
+		margin: 1.6em 0px 0.8em;
+		&:first-child {
+			margin-top: 1em;
+		}
+	}
+	h4 {
+		margin: 1.4em 0px 0.8em;
+	}
+	h5 {
+		font-weight: bold;
+		margin: 1.4em 0px 0.8em;
+	}
+	.entry-content {
+		width: auto;
+	}
+	.entry-meta {
+		text-align: left;
+	}
+//border: 1px dotted red;
+	article {
+		&.post-145{
+			padding-bottom: 60px;
+		}
+		a.forget-pw {
+			body.logged-in & {
+				display: none;
+			}
+		}
+		ul.job-listing-meta {
+			list-style-type: none;
+		}
+		.entry-title {
+			text-align: left;
+		}
+		.entry-content {
+		}
+		.note {
+			background-color: #f8f8f8;
+			border-radius: 8px;
+			padding: 20px 20px;
+			margin-top: 60px;
+		}
+	}
+	.wpcf7-form {
+		label {
+			display: block;
+		}
+		input.text,
+		textarea {
+			width: 100%;
+			max-width: 100%;
+		}
+		textarea {
+			//width: 100%;
+		}
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// サイドバー
+// ****************
+.sidebar {
+	.widget-title {
+		color: $mC;
+		border-color: $mC;
+		padding-bottom: 12px;
+		margin-bottom: 20px;
+	}
+//border: 1px dotted red;
+	ul {
+		li {
+			&.job-type {
+				color: inherit !important;
+			}
+			a {
+				&:before {
+					padding-top: 2px;
+				}
+			}
+		}
+	}
+	.job_manager {
+		ul.job_listings {
+			li {
+				a {
+					padding: 10px 5px;
+					&:before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+//border: 1px dotted red;
+	#tml-widget,
+	#recent-post-widget {
+		ul {
+			padding-left: 10px;
+		}
+	}
+	#register-btn-widget {
+		body.logged-in & {
+			//display: none;
+		}
+		.sidebar-register-btn {
+			display: block;
+			text-align: center;
+				nav {
+					width: 85%;
+					border-radius: 10px;
+					margin-bottom: 0.5em;
+					a {
+					display: block;
+					font-size: 175%;
+					color: white;
+					line-height: 2.5em;
+					letter-spacing: 2px;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// フッター
+// ****************
+.footer {
+	background-color: $mC !important;
+	margin-top: 40px;
+	body.home & {
+		margin-top: 0;
+	}
+	.copyright {
+		padding: 10px 0px 10px;
+	}
+	.credit {
+		display: none;
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// フロントページ
+// ****************
+body.home {
+	.container {
+		//padding: 0;
+		.wow {
+			width: 100%;
+		}
+	}
+//border: 1px dotted red;
+	.frontpage-banner {
+		padding: 120px 0px;
+		z-index: 10;
+		.block-title {
+			&:after {
+				display: block;
+				position: relative;
+				top: 18px;
+				left: auto;
+				width: 2.0em;
+				//border: 4px solid $mC !important;
+				border-bottom-width: 4px;
+				margin: 0 auto !important;
+			}
+		}
+	}
+	.frontpage-content {
+		margin: 0;
+		.container {
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		p {
+			margin: 1.6em 0px;
+		}
+	}
+	#catchcopy {
+		box-shadow: 0px 0px 40px 4px rgba(black, 0.04);
+		padding: 20px 0px 30px;
+		z-index: 5;
+		a.job-link-btn {
+			font-size: 24px;
+			border: none !important;
+			border-radius: 6px;
+			box-shadow: none !important;
+			padding: 12px 60px;
+			&:hover {
+			}
+		}
+	}
+	#welcome {
+		background-color: #F9F9F9;
+		padding: 40px 0px 50px;
+		z-index: 1;
+		.container {
+			margin-top: 0;
+		}
+	}
+//border: 1px dotted red;
+	#iconcols,
+	#open {
+		padding-bottom: 60px;
+	}
+	#iconcols {
+		.col-md-3 {
+		}
+		.content-icon {
+			background-color: #f4f4f4;
+			border: 1px solid #eee;
+			border-radius: 8px;
+		}
+		.body {
+			margin-bottom: 0;
+			padding-bottom: 0 !important;
+			p{
+				margin-bottom: 0;
+			}
+		}
+	}
+//border: 1px dotted red;
+	#open {
+		.container {
+			max-width: 880px;
+			margin-right: auto;
+			margin-left: auto;
+			.joblisting-content {
+				background-color: white;
+				//border: 0px solid #eee;
+				//border-width: 0px 1px 1px;
+				a {
+					color: inherit;
+				}
+				nav.job-link-btn {
+					float: right;
+				}
+			}
+		}
+	}
+	#latest {
+		.post-grid {
+			//text-align: center;
+			background-color: white;
+			//border: 0px solid $mC;
+			//border-width: 10px 0px 4px;
+			border-radius: 2px;
+			box-shadow: 2px 3px 10px 0px rgba(0, 0, 0, 0.1);
+			padding: 20px 20px 18px;
+		}
+		.recent-entry-image {
+			//display: none;
+		}
+	}
+	#cta {
+		padding: 130px 0px 120px;
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// お知らせ
+// ****************
+#topics-container {
+}
+
+// ****************
+// 求人
+// ****************
+$jlB: 8px solid #ddd;
+$jlPb: 10px;
+body.logged-in {
+	.fieldset-account-sign-in, // 求人登録／編集のアカウント表示
+	.fieldset-application { // 求人登録／応募メール
+		display: none;
+	}
+	#page-9 {
+		.fieldset-job_expires {
+			display: none;
+		}
+	}
+}
+body.single-job_listing { // 求人詳細ページ
+	.entry-title {
+		font-weight: bold;
+		border-bottom: $jlB;
+		padding-bottom: $jlPb;
+	}
+//border: 1px dotted red;
+}
+.single-job-listing { // 求人詳細ページ
+	table {
+		&#job-main-spec {
+			a {
+				color: inherit;
+				cursor: default;
+				text-decoration: none;
+			}
+		}
+		th {
+			background-color: #F8F8F8;
+		}
+	}
+	.company {
+		display: none;
+		background-color: #F8F8F8;
+		img.company_logo {
+			display: none;
+		}
+		p.name {
+			font-size: 120%;
+			margin-left: 0;
+			padding: 0;
+		}
+		.job_description {
+			margin-bottom: 30px;
+		}
+		table#job-main-spec {
+		}
+	}
+	.button-note {
+		font-size: 85%;
+	}
+//border: 1px dotted red;
+	#tab-menu {
+		$bod: 1px solid #ccc;
+		margin-top: 20px;
+		ul {
+			list-style-type: none;
+			margin: 0px 0px -1px;
+			li {
+				display: inline-block;
+				background-color: #DDD;
+				border: $bod;
+				border-width: 0px;
+				border-radius: 4px 4px 0px 0px;
+				margin-left: 5px;
+				a {
+					display: inline-block;
+					padding: 10px 20px;
+				}
+				&.active {
+					background-color: white;
+					border-width: 1px;
+					border-bottom-color: white;
+					a {
+						cursor: default;
+						color: inherit;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+//border: 1px dotted red;
+		#tab-box {
+			border-top: $bod;
+			padding-top: 20px;
+			div {
+				display: none;
+				&.active {
+					display: block;
+				}
+			}
+			table {
+				width: 100%;
+				&, th, td {
+					border: 1px solid rgba(#E6E6E6, 1);
+					border-color: $bdC;
+					border-collapse: collapse;
+				}
+				ht, td {
+					padding: 1em ;
+				}
+				th {
+					width: 20%;
+					white-space: nowrap;
+				}
+				td {
+				}
+			}
+			.job-detail {}
+			.school-detail {
+				.school-name {
+					font-size: 20px;
+					font-weight: bold;
+					color: white;
+					background-color: $mC;
+					margin: 0;
+					padding: 10px;
+				}
+				.school-tagline,
+				.school-description {
+				}
+				.school-tagline {
+					font-size: 24px;
+					border-bottom: 2px dotted #CCC;
+					margin: 1em 4px 1em;
+				}
+				.school-description {
+					margin: 0px 10px 20px;
+				}
+			}
+		}
+	}
+	ul.job-listing-meta {
+		display: none;
+	}
+//border: 1px dotted red;
+}
+#job-manager-job-dashboard { // 登録済の求人
+	table {
+		$pS: 10px;
+		th,
+		td {
+			padding-right: $pS;
+			padding-left: $pS;
+			&.filled {
+				text-align: left;
+			}
+			&.expires {
+				text-align: left;
+			}
+		}
+		td {
+			&.filled {
+				padding-left: 1.2*$pS;
+			}
+		}
+	}
+}
+#page-10 { // 登録済の求人（募集内容の編集）
+	label {
+		small {
+			color: $mC;
+			padding-left: 0.25em;
+		}
+	}
+//border: 1px dotted red;
+}
+#joblistings-list { // 検索結果
+	$bbset: 1px dotted #cccccc;
+	.search-option {
+		border-bottom: $bbset;
+	}
+	article.job-detail {
+		clear: both;
+		margin: 20px 0px 3px;
+		.school-name {
+		}
+	}
+}
+.page-content {
+	.job_listing_preview_title {
+		padding-top: 8px;
+		padding-bottom: 4px;
+		input.button {
+			margin-top: 0;
+		}
+		h2 {
+			height: 32px;
+			font-size: 125%;
+			line-height: 32px;
+		}
+//border: 1px dotted red;
+	}
+	.joblisting-content {
+		margin: 20px 0px 30px;
+		body.home & {
+		}
+	}
+	article.job-detail { // 求人リスト
+		a.job-link {
+			display: block;
+			position: relative;
+			min-height: 50px;
+			color: inherit;
+			&:hover {
+				text-decoration: none;
+				.school-name {
+					color: $aC;
+				}
+				.job-content {
+					color: #999;
+				}
+				.job-link-btn {
+					color: white;
+					background-color: #999;
+				}
+			}
+		}
+		.job-title {
+			font-size: 200%;
+			font-weight: bold;
+			//border-bottom: 3px solid $mC;
+			border-bottom: $jlB;
+			padding: 20px 10px $jlPb;
+			margin: 0px 0px 20px;
+			body.home & {
+				//border-bottom: none;
+				margin: 0px 10px 20px;
+				//padding: 10px 0px;
+			}
+		}
+//border: 1px dotted red;
+		.job-link-btn {
+			display: block;
+			float: right;
+			margin-bottom: 0.75em;
+			margin-left: 20px;
+		}
+		.job-head {
+		}
+		.job-body {
+		padding: 0px 20px 20px;
+		}
+		.school-name,
+		.job-content {
+		}
+		.school-name {
+			font-size: 160%;
+			font-weight: normal;
+			margin: 0px 0px 12px;
+		}
+		.job-content {
+			p {
+				color: inherit;
+				margin-bottom: 1em;
+			}
+		}
+//border: 1px dotted red;
+		table#job-main-spec {
+			clear: both;
+			margin-bottom: 0;
+			background-color: white;
+			th {
+				width: 15%;
+				white-space: nowrap;
+				background-color: #F8F8F8;
+			}
+			td {
+				width: 35%;
+				&.job-listing-category {
+					font-weight: bold;
+				}
+				&.job-listing-type {
+					.job-type {
+						line-height: inherit;
+						background: none;
+						padding: 0;
+					}
+				}
+				a {
+					color: inherit;
+					cursor: default;
+					text-decoration: none;
+				}
+			}
+		}
+		&.featured {
+			background-color: #FFFFEE;
+			h3.school-name {
+				background-color: #F4F4EE !important;
+			}
+		}
+	}
+	.job_application {
+		.application_details {
+			table.user-info {
+				width: auto;
+				&, th, td {
+					border: none;
+				}
+				td {
+					padding-left: 0;
+				}
+			}
+		}
+	}
+	article {
+		table.job-spec {
+		}
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// 求人登録
+// ****************
+.registration-note {
+	background-color: #F9f9f9;
+	border: 3px double $bdC;
+	padding: 20px 20px 10px;
+	.note-title {
+		font-weight: bold;
+		border-bottom: 3px dotted $bdC;
+		margin: 0px 0px 1em;
+		padding-bottom: 0.5em;
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// メッセージ通信（コメント）
+// ****************
+#comments {
+	$bdC: #e1e1e1;
+	input {
+		margin-bottom: 0.5em;
+		&[name="comp_id"] {
+			display: inline-block;
+			margin-right: 20px;
+			margin-left: 0.5em;
+		}
+	}
+	.exchange-cont {
+	}
+	.show {
+		display: block;
+	}
+	.comment-author,
+	.comment-date,
+	.comment-content {
+		font-size: 14px;
+		font-weight: normal;
+		line-height: normal;
+		padding: 0;
+		margin: 0;
+	}
+	.comment-author {
+		font-weight: bold;
+		.my-name {
+			font-weight: normal;
+		}
+		.sender-name {
+		}
+		.recipient-name {
+		}
+		.arrow {
+			font-weight: normal;
+			padding: 0px 0.5em;
+		}
+	}
+//border: 1px dotted red;
+	.comment-date {
+		display: block;
+		font-size: 12px;
+	}
+	$bodR: 20px;
+	$commM: 0px;
+	$commM2: 10%;
+	.comment-content {
+		text-align: left;
+		background-color: white;
+		border: 1px solid #eee;
+		border-radius: 0px $bodR $bodR $bodR;
+		padding: 8px 14px;
+		margin-right: $commM2;
+		margin-left: $commM;
+	}
+	h3.recipient-name {
+		font-size: 14px;
+		font-weight: bold;
+		padding: 0;
+		margin: 0;
+		strong {
+			font-size: 16px;
+		}
+	}
+	.comments-area {
+		padding: 0;
+		margin-top: 20px;
+		.comment-lists {
+			padding: 0;
+			margin: 0px 0px 40px;
+		}
+		.comment-list {
+			width: auto;
+			height: 400px;
+			overflow-y: scroll;
+			background-color: #f9f9f9;
+			border: 1px solid $bdC;
+			border-radius: 4px;
+			padding: 0px 20px;
+		}
+		.comment-item {
+			padding: 20px 0px;
+			&:first-child {
+				border-top-width: 0px;
+			}
+		}
+		.comment-item-me {
+			text-align: right;
+			.comment-content {
+				color: white;
+				background-color: $mC;
+				//background-color: #eee;
+				//border-color: #e6e6e6;
+				border-color: $mC;
+				border-radius: $bodR 0px $bodR $bodR;
+				margin-right: $commM;
+				margin-left: $commM2;
+			}
+		}
+		.exchange-select {
+			p.select-member {
+				display: none;
+			}
+			.change-comp-content {
+				display: block;
+			}
+		}
+		.exchange-selected {
+			p.select-member {
+				display: block;
+			}
+			.change-comp-content {
+				display: none;
+			}
+		}
+		.exchange-deleat {
+			border-top: 1px solid $bdC;
+			margin-top: 40px;
+			padding-top: 20px;
+		}
+		p.closed {
+			&:after {
+				content: " ▽";
+				color: $aC;
+			}
+		}
+		p.opened {
+			&:after {
+				content: " △";
+			}
+		}
+	}
+//border: 1px dotted red;
+}
+#respond {
+	padding: 0px;
+	margin: 0px;
+	form {
+		padding: 0;
+		margin: 0;
+	}
+	p {
+		&.comment-form-comment {
+			margin: 0;
+			margin-bottom: 4px;
+		}
+		&.form-submit {
+			text-align: right;
+			margin: 0;
+		}
+	}
+	label[for="comment"] {
+		margin: 0;
+	}
+	textarea {
+		margin: 0;
+	}
+}
+
+// ****************
+// 求人ブックマーク
+// ****************
+#job-bookmark {
+	&, form {
+		text-align: right;
+	}
+	input {
+		&[type="submit"],
+		&[type="button"] {
+			display: inline-block;
+		}
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// 応募履歴
+// ****************
+#job-apply-records {
+	$bg-co: #f3f3f3;
+	$bod: 1px solid #e1e1e1;
+	article {
+		&.unselected {
+			display: none;
+		}
+		&.hide-apply {
+			display: none;
+		}
+		&.show-all {
+			display: block;
+		}
+		&.apply-record {
+			overflow: hidden;
+			border: $bod;
+			border-radius: 4px;
+			margin-bottom: 40px;
+		}
+		//.job-records-head,
+		.job-records-head-date,
+		.job-records-head-title,
+		.job-records-body,
+		.job-records-footer {
+			padding: 0px 20px;
+		}
+		.job-records-body,
+		.job-records-footer {
+			border-top: $bod;
+		}
+		.job-records-head {
+			position: relative;
+			.job-records-head-date {
+				background-color: $bg-co;
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+			h3.job-apply-date {
+				font-size: 120%;
+				line-height: 1.2;
+				padding: 0;
+				margin: 0;
+				margin-right: 4em;
+			}
+			.hide-apply {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				//margin: 0;
+				padding: 6px 10px;
+			}
+			h4.job-school {
+				margin-top: -10px;
+			}
+		}
+//border: 1px dotted red;
+		.job-records-body {
+			margin: 0;
+			//margin-top: 28px;
+			//padding-bottom: 20px;
+			table.job-apply-myinfo {
+				width: 100%;
+				margin: 10px 0px;
+				&, th, td {
+					font-weight: normal;
+					border-color: #999;
+				}
+			}
+			.btn-emessage {
+				padding-bottom: 20px;
+			}
+		}
+//border: 1px dotted red;
+		.job-records-footer {
+			background-color: $bg-co;
+			padding-bottom: 10px;
+		}
+//border: 1px dotted red;
+		.job-records-progress { // 進捗状況
+			position: relative;
+			h4.jobrec-prog-title {
+				//line-height: 36px;
+				vertical-align: middle;
+				margin: 10px 0px;
+			}
+			input.submit {
+				display: block;
+				position: absolute;
+				top: 10px;
+				right: 10px;
+				line-height: 1;
+				margin: 0;
+			}
+			.jobrec-prog-content {
+				display: table;
+				.jobrec-prog-content-inner {
+					display: table-row;
+					ul, li {
+						margin: 0;
+						padding: 0;
+					}
+					ul {
+						display: table-cell;
+						&.job-progress-list {
+							padding-right: 0.5em
+						}
+						&.job-employment-list {
+							border-left: $bod;
+						}
+						&.job-retention-list {
+							white-space: nowrap;
+							border-left: $bod;
+							padding-left: 0.5em;
+						}
+					}
+					li {
+						display: inline-block;
+						padding: 0px 0.5em;
+						input {
+							margin: 0;
+						}
+					}
+				}
+			}
+		} // .job-records-progress
+//border: 1px dotted red;
+		.jobrec-accordion { // アコーデオン
+			.jobrec-accordion-btn {
+				cursor: pointer;
+				padding: 8px 0px;
+				.btn-title {
+					font-size: 100%;
+					font-weight: normal;
+					line-height: normal;
+					text-align: center;
+					margin: 0;
+					padding: 0;
+					.none {
+						display: none;
+					}
+					.marker {
+						color: $aC;
+					}
+				}
+				&:hover h4 .marker {
+					color: #ccc;
+				}
+			}
+			.jobrec-accordion-hide {
+				display: none;
+			}
+		} // .jobrec-accordion
+	}
+//border: 1px dotted red;
+} // #job-apply-records
+
+// ****************
+// 検索
+// ****************
+#searchform {
+	margin: 0 15px;
+	fieldset.jobsearch {
+		display: inline-block;
+		margin: 0.5em 0;
+		margin-right: 2em;
+	}
+	label.label-checkbox {
+		display: inline-block;
+		margin-right: 2em;
+	}
+}
+.job-listings {
+	#searchoption {
+		.search-option-head {
+			font-weight: bold;
+		}
+		.search-option-name {
+			display: inline-block;
+			margin-right: 20px;
+		}
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// よくある質問
+// ****************
+#faq {
+	.faq-cat {
+		clear: both;
+		border: 0px solid #E0E0E0;
+		padding: 0px 0px 20px;
+		h3.faq-cat-title {
+			$pr: 30px; // padding-right
+			font-size: 150%;
+			line-height: normal;
+			border-bottom: 1px solid $bdC;
+			padding: 8px 0px;
+			padding-right: $pr;
+			margin-bottom: 0;
+			&:hover {
+				cursor: pointer;
+				opacity: 0.7;
+				span {
+					color: #ccc;
+				}
+			}
+			span {
+				$fS: 14px; // フォント（▼）サイズ
+				$fW: 26px; // ボタン（●）サイズ
+				display: inline-block;
+				width: $fW;
+				height: $fW;
+				float: right;
+				font-size: $fS;
+				color: $aC;
+				line-height: $fW *1.0;
+				text-align: center;
+				vertical-align: middle;
+				border: 1px solid #ccc;
+				border-radius: 50%;
+				margin-right: -1* $pr;
+				&.none {
+					display: none;
+				}
+				&.openbtn {
+				}
+				&.closebtn {
+					line-height: $fW *0.95;
+				}
+			}
+		}
+	}
+//border: 1px dotted red;
+	dl.none {
+	}
+	dl.faq-item-list {
+		$qaFS: 34px; // font-size of FAQ
+		display: none;
+		position: relative;
+		padding: 0px 20px;
+		dt, dd {
+			position: relative;
+			padding-left: $qaFS *1.3;
+			&:before {
+				display: block;
+				width: $qaFS *1.2;
+				height: $qaFS;
+				position: absolute;
+				top: 0;
+				left: 0;
+				font: $qaFS sans-serif normal;
+				color: $sC;
+				line-height: 1em;
+				text-align: center;
+			}
+		}
+		dt {
+			font-size: 160%;
+			color: #555;
+			line-height: normal;
+			margin: 10px 0px 4px;
+			padding-top: 0.2em;
+			&:first-child {
+				margin-top: 24px;
+			}
+			&:before {
+				content: "Q.";
+			}
+		}
+		dd {
+			min-height: $qaFS +20px;
+			border-bottom: 1px solid #eee;
+			margin: 0px 0px 20px;
+			padding-top: 0.2em;
+			&:before {
+				content: "A.";
+				font-size: $qaFS *0.75;
+				color: #999;
+			}
+		}
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// 運営会社
+// ****************
+#page-86 {
+	table {
+		&, th, td {
+			border-width: 1px 0px;
+			vertical-align: top;
+		}
+		th, td {
+			padding: 1em 10px;
+		}
+		th {
+			font-weight: normal;
+		}
+	}
+//border: 1px dotted red;
+}
+
+// ****************
+// Theme My Login
+// ****************
+#theme-my-login {
+	max-width: 100%;
+	label {
+		display: block;
+		margin-bottom: 0.5em;
+		&.user_sex {
+			display: inline-block;
+			margin-right: 2em;
+		}
+	}
+	input[type="checkbox"] {
+		display: inline-block;
+	}
+	//会員登録
+	p {
+		&.message {
+			display: none;
+		}
+		&.tml-user-pass1-wrap,
+		&.tml-user-pass2-wrap,
+		&.register-form-p {
+			padding: 0px 10px;
+		}
+	}
+	.checkbox-box {
+		display: block;
+		background-color: #F8F8F8;
+		border: 1px solid #DEDEDE;
+		border-radius: 4px;
+		margin: 6px 0px;
+		padding: 0.5em 8px;
+	}
+	.tos { // 会員規約
+		$p: 20px;
+		display: block;
+		border: 1px solid #DDDDDD;
+		border-radius: 10px;
+		padding: $p;
+		margin-bottom: 0.5em;
+		.tos-title {
+			margin-top: 0;
+		}
+		.tos-content {
+			width: auto;
+			height: 200px;
+			overflow-y: scroll;
+			//margin-right: -0.5*$p;
+			padding-right: 5px;
+		}
+	}
+	// プロフィール
+	table.tml-form-table {
+		//display: block;
+		margin-bottom: 40px;
+		tr, th, td {
+			//display: block;
+			width: auto;
+		}
+		tr {
+			//&.tml-nickname-wrap,
+			//&.tml-display-name-wrap,
+			&.tml-user-contact-method-user_confirm-wrap,
+			&.tml-user-contact-method-googleplus-wrap {
+				display: none;
+			}
+		}
+		th, td {
+			width: 100% !important;
+			border: none;
+			padding: 0px 10px;
+		}
+		th {
+			label {
+				margin: 0;
+				padding: 0;
+			}
+		}
+		td {
+			padding-bottom: 1.5em;
+			input, select {
+				//margin-bottom: 2em;
+			}
+		}
+	}
+//border: 1px dotted red;
+}

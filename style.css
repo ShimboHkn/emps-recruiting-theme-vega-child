@@ -1,0 +1,16 @@
+/*
+CTC Separate Stylesheet
+Updated: 2017-04-21 18:26:32
+Theme Name: Vega Child
+Theme URI: https://www.lyrathemes.com/vega/
+Template: vega
+Author: Lyra Themes
+Author URI: https://www.lyrathemes.com/
+Description: Vega is a clean, minimal, responsive one page business theme. This simple theme can be used for a personal blog, business website, landing page, business portfolio, or any other creative website. Using Vega to create your new website will be a fast and easy experience, without getting overwhelmed with needless settings and choices. This multipurpose theme is built on the Bootstrap framework making it fully responsive and mobile friendly. This one page theme can also be used to set up a single page (one page) website. It has animated content, three pre-built color choices (orange, blue, and green), text and image logo options, full screen image banner, multiple home page displays, multiple blog feed displays, and custom CSS options. The one page home page displays the banner, welcome content, featured pages, two call to action rows with an optional parallax background effect, recent posts, and an open content row. You can set the background color for each front page section, and control the filter/overlay color for the CTA sections and front page banner too! Vega has been tested with WooCommerce and has basic WooCommerce support/integration. This simple business theme can also be used to create multilanguage websites (tested using qTranslateX). Backed by world class, one-on-one support, Vega is featured-packed yet simple enough to be used to create almost any kind of website.
+Tags: one-column,two-columns,right-sidebar,grid-layout,flexible-header,custom-header,custom-colors,custom-menu,featured-image-header,featured-images,footer-widgets,full-width-template,theme-options,translation-ready,blog,news,portfolio
+Version: 2.2.3.1492766792
+*/
+
+@import url('css/custom.css');
+@import url('css/responsive.css');
+@import url('css/datepicker.css');
